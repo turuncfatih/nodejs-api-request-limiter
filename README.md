@@ -23,7 +23,7 @@ const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 dakika içinde
     max: 5, // Aynı IP üzerinden maximum 5 istek gelebilir
    
-   skip: (request, response) => allowlist.includes(request.ip), // Verdiğiniz ipler limite takılmayaktır ...
+   skip: (request, response) => allowlist.includes(request.ip), // Verdiğiniz ipler limite takılmayacaktır ...
    
    message:
         'Aynı IP üzerinden Çok fazla deneme yaptınız, lütfen 15 dakika sonra tekrar deneyin',
